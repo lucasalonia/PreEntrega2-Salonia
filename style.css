@@ -180,33 +180,26 @@ main section.destacados div.destacados__general .destacados__imagen {
 
 /*SECTION iframe*/
 section.enlace {
-    margin: 5%;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
+    
 }
 section.enlace div.enlace__topcrop {
     text-align: center;
+    
 }
 section.enlace div.enlace__topcrop iframe.enlace__video{
-    border: solid rgb(87, 185, 87);
-    width: 400px;
-    height: 225px;
     border-radius: 10px;
 }
 section.enlace div.enlace__topcrop h2.enlace__titulo {
-    padding-top: 15px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 130%;
     font-family:'Oswald', sans-serif;
     text-transform: uppercase;
+   
 }
 section.enlace div.enlace__topcrop p.enlace__parrafo {
     font-family:'Oswald', sans-serif;
-    text-align: center;
-    font-size: 100%;
-} 
+    padding: 5px;
+}
 /*END SECTION iframe*/
 
 /* END FOOTER*/
