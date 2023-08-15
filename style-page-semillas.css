@@ -140,6 +140,7 @@ section.variedades {
 
 section.variedades h2.variedades__titulo {
     text-transform: uppercase;
+    font-size: 25px;
     border-top: solid #495042;
     border-bottom: solid #495042;
     border-radius: 4px;
@@ -157,6 +158,7 @@ section.variedades img.variedades__one-imagen {
 section.variedades h2.variedades__one-titulo{
     text-transform: uppercase;
     margin-bottom: 15px;
+    font-size: 25px;
 }
 section.variedades p.variedades__one-parrafo{
     margin-top: 10px;
@@ -186,6 +188,7 @@ section.variedades img.variedades__two-imagen {
 section.variedades h2.variedades__two-titulo{
     text-transform: uppercase;
     margin-bottom: 15px;
+    font-size: 25px;
 }
 section.variedades p.variedades__two-parrafo{
     margin-top: 10px;
@@ -193,7 +196,7 @@ section.variedades p.variedades__two-parrafo{
 
 }
 section.variedades a.variedades__two-anchor{
-color: #5d6654;
+    color: #5d6654;
     text-decoration: underline;
     border-radius: 10px;
 }
@@ -221,10 +224,11 @@ section.thc {
     padding-top: 10px;
     display: flex;
     flex-direction: column;
-    text-align: center;
 }
-section.thc h2.thc__imagen-titulo{
+section.thc h2.thc__imagen-titlo{
     text-align: center;
+    text-transform: uppercase;
+    font-size: 30px
 }
 
 section.thc .thc__imagen-custom {

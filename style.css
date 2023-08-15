@@ -78,26 +78,139 @@ main section.promociones div.promociones__kit-two {
     margin: 5%;
     padding: 5%;
 }
-section.promociones div.promociones__kit-one img.promociones__kit-one-imagen {
+main section.promociones div.promociones__kit-one img.promociones__kit-one-imagen {
     border: solid #3f552c;
     border-radius: 50px;
     width: 95%;
     margin: auto;
 }
+main section.promociones div.promociones__kit-one-desktop {
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+}
+main section.promociones div.promociones__kit-two-desktop {
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+}
 
-section.promociones div.promociones__kit-two .promociones__kit-two-imagen {
+main section.promociones div.promociones__kit-two img.promociones__kit-two-imagen {
     border: solid #3f552c;
     border-radius: 50px;
     width: 95%; 
     margin: auto;
 }
-.promociones__kit-two-titulo {
+main section.promociones .promociones__kit-one-titulo {
     font-family:'Oswald', sans-serif;
     font-size: 30px;
     margin-top: 5%;
     text-transform: uppercase;
 }
+main section.promociones .promociones__kit-two-titulo {
+    font-family:'Oswald', sans-serif;
+    font-size: 30px;
+    margin-top: 5%;
+    text-transform: uppercase;
+}
+
+/*SECTION promociones queries*/
+
+@media (min-width: 1200px) {
+    body.scroll::-webkit-scrollbar {
+        width: 13px;
+    }
+    body.scroll::-webkit-scrollbar-thumb {
+        border-radius: 20px;
+    }
+   
+    main section.promociones {
+        font-family:'Oswald', sans-serif;
+        background-color: rgb(85, 170, 85);
+        display: grid;
+        grid-template-areas:
+        "titulo titulo"
+        "imagen-uno descripcion-uno"
+        "imagen-dos descripcion-dos"
+        ;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px 2fr 2fr;
+    }
+    main section.promociones h1.promociones__titulo {
+        justify-self: center;
+        align-self: center;
+        padding: 0px;
+        margin: 0px;
+        grid-area: titulo;
+
+    }
+    main section.promociones div.promociones__kit-one-desktop {
+        visibility: visible;
+        background-color: #3c4336;
+        border-radius: 10px;
+        padding: 30px;
+        width: 100%;
+        height: 500px;
+        margin-top: 65px;
+        grid-area: descripcion-uno;
+        align-self: start;
+       
+    }
+    
+    main section.promociones p.promociones__kit-one-desktop-parrafo{
+        color: rgb(206, 211, 216);
+        font-size: 23px
+    }
+    main section.promociones div.promociones__kit-two-desktop {
+        visibility: visible;
+        background-color: #3c4336;
+        border-radius: 10px;
+        padding: 30px;
+        width: 100%;
+        height: 500px;
+        margin-top: 65px;
+        align-self: start;
+        grid-area: descripcion-dos;
+    }
+     p.promociones__kit-two-desktop-parrafo {
+        color: rgb(206, 211, 216);
+        font-size: 23px
+    }
+    main section.promociones div.promociones__kit-one {
+        border: none;
+        grid-area: imagen-uno;
+        width: 75%;
+        height: 500px;
+        margin-top: 70px;
+        background-color: #3c4336;
+        color:rgb(206, 211, 216);
+
+    }
+    main section.promociones div.promociones__kit-one img.promociones__kit-one-imagen {
+        width: 90%;
+    }
+    main section.promociones div.promociones__kit-two {
+        border: none;
+        grid-area: imagen-dos;
+        width: 75%;
+        height: 500px;
+        margin-top: 70px;
+        background-color: #3c4336;
+        color:rgb(206, 211, 216);
+       
+    }
+    
+    
+    main section.promociones div.promociones__kit-two img.promociones__kit-two-imagen {
+        width: 80%;
+    }
+    
+}
+/*END SECTION promociones queries*/
+
 /* End SECTION promociones*/
+
+
 
 /*SECTION descuento*/
 main section.descuentos {
@@ -121,11 +234,100 @@ main section.descuentos div.descuentos__reprocann img.descuentos__imagen{
     width: 50%;
     margin-top: 5px;
 }
-main section.descuentos div.descuentos__reprocann .descuentos__titulo{
+main section.descuentos div.descuentos__reprocann h2.descuentos__titulo{
     font-size: 75%;
 }
-main section.descuentos div.descuentos__reprocann .descuentos__parrafo {
+main section.descuentos div.descuentos__reprocann p.descuentos__parrafo {
     font-size: 75%;
+}
+main section.descuentos div.descuentos__envios {
+    display: none;    
+}
+main section.descuentos div.descuentos__envios img.descuentos__envios-imagen {
+    display: none;    
+}
+main section.descuentos div.descuentos__envios h2.descuentos__envios-titulo {
+    display: none;    
+}
+main section.descuentos div.descuentos__tarjetas {
+    display: none;    
+}
+main section.descuentos div.descuentos__tarjetas  img.descuentos__tarjetas-imagen {
+    display: none;    
+}
+main section.descuentos div.descuentos__tarjetas  h2.descuentos__tarjetas-titulo {
+    display: none;    
+}
+
+@media (min-width: 1200px){
+    main section.descuentos {
+        font-family:'Oswald', sans-serif;
+        text-transform: uppercase;
+        color:rgb(206, 211, 216);
+        border-bottom: solid  #3c4336;
+        border-top: solid  #3c4336;
+        background-color: #3c4336;
+        border-radius:5px;
+        padding-top: 15px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    main section.descuentos div.descuentos__reprocann {
+        height: 100%;
+        width: 30%;
+        text-align: center;
+        font-family:'Oswald', sans-serif;
+        font-size: 30px;
+        text-transform: uppercase;
+    }
+    main section.descuentos div.descuentos__reprocann img.descuentos__imagen{
+        width: 50%;
+        margin-top: 5px;
+    }
+    main section.descuentos div.descuentos__reprocann h2.descuentos__titulo{
+        font-size: 75%;
+    }
+    main section.descuentos div.descuentos__reprocann p.descuentos__parrafo {
+        font-size: 75%;
+    }
+    main section.descuentos div.descuentos__envios {
+        width: 30%;
+        height: 100%;
+        display: block;
+
+    }
+    main section.descuentos div.descuentos__envios img.descuentos__envios-imagen {
+        width: 50%;
+        display: block; 
+        margin-left: 85px;
+       
+    }
+    main section.descuentos div.descuentos__envios h2.descuentos__envios-titulo {
+        display: block; 
+        text-align: center;   
+        font-size: 25px;      
+    }
+    main section.descuentos div.descuentos__tarjetas {
+        width: 30%;
+        height: 100%;
+        display: block;
+
+    }
+    main section.descuentos div.descuentos__tarjetas  img.descuentos__tarjetas-imagen {
+        width: 50%;
+        height: 70%;
+        display: block; 
+        margin-left: 85px;
+    }
+    main section.descuentos div.descuentos__tarjetas  h2.descuentos__tarjetas-titulo {
+        display: block;     
+        text-align: center;
+        font-size: 25px;  
+         
+    }
+
+
 }
 /*END SECTION descuentos*/
 
