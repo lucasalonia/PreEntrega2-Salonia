@@ -18,6 +18,14 @@ body.scroll::-webkit-scrollbar-thumb {
 body.body {
     background-color: rgb(85, 170, 85);
 }
+@media (min-width: 1200px) {
+    body.scroll::-webkit-scrollbar {
+        width: 13px;
+    }
+    body.scroll::-webkit-scrollbar-thumb {
+        border-radius: 20px;
+    }
+}
 
 /* HEADER*/
 
@@ -114,16 +122,10 @@ main section.promociones .promociones__kit-two-titulo {
     text-transform: uppercase;
 }
 
-/*SECTION promociones queries*/
+/* End SECTION promociones*/
 
+/*SECTION QUERIES promociones */
 @media (min-width: 1200px) {
-    body.scroll::-webkit-scrollbar {
-        width: 13px;
-    }
-    body.scroll::-webkit-scrollbar-thumb {
-        border-radius: 20px;
-    }
-   
     main section.promociones {
         font-family:'Oswald', sans-serif;
         background-color: rgb(85, 170, 85);
@@ -204,11 +206,8 @@ main section.promociones .promociones__kit-two-titulo {
     main section.promociones div.promociones__kit-two img.promociones__kit-two-imagen {
         width: 80%;
     }
-    
 }
-/*END SECTION promociones queries*/
-
-/* End SECTION promociones*/
+/*END SECTION QUERIES promociones */
 
 
 
@@ -258,6 +257,10 @@ main section.descuentos div.descuentos__tarjetas  img.descuentos__tarjetas-image
 main section.descuentos div.descuentos__tarjetas  h2.descuentos__tarjetas-titulo {
     display: none;    
 }
+
+/*END SECTION descuentos*/
+
+/*SECTION QUERIES descuentos*/
 
 @media (min-width: 1200px){
     main section.descuentos {
@@ -329,10 +332,13 @@ main section.descuentos div.descuentos__tarjetas  h2.descuentos__tarjetas-titulo
 
 
 }
-/*END SECTION descuentos*/
+/*END SECTION QUERIES descuentos*/
+
+
 
 
 /*SECTION destacados*/
+
 main section.destacados {
     background-color: #3c4336;
     border-radius: 15px;
@@ -378,12 +384,103 @@ main section.destacados div.destacados__general .destacados__imagen {
     margin-top: 5%;
     text-transform: uppercase;
 }
+
 /*END SECTION destacados*/
+
+/* SECTION QUERIES destacados*/
+
+@media (min-width: 1200px) {
+    main section.destacados {
+        background-color: #3c4336;
+        margin: 0px;
+        padding: 20px;
+        display: grid;
+        grid-template-areas: 
+        "titulo titulo titulo titulo"
+        "destacado-one destacado-two destacado-three destacado-four"
+        ;
+        grid-template-rows: 1fr 4fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-items:center ;
+        align-items:center ;
+        height: 700px;
+        gap: 10px;
+    }
+    section.destacados .destacados__titulo{
+        grid-area: titulo;
+        font-family:'Oswald', sans-serif;
+        text-transform: uppercase;
+        color:  rgb(206, 211, 216);
+        margin-bottom: 0%;
+        margin-top: 0%;
+        border-top: solid rgb(206, 211, 216);
+        border-radius: 0%;
+        text-align: center;
+    }
+    main section.destacados div.destacados__general {
+        align-self: center;
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 5px;
+        padding-top: 25px;
+    }
+ 
+    main section.destacados div.destacados__one {
+        text-align: center;
+        grid-area: destacado-one;
+        padding-top: 10px;
+        background-color:rgb(85, 170, 85);
+        border: solid #3f552c;
+        border-radius: 50px;
+        margin: 0%;
+        padding: 0%;
+    }
+    div.destacados__two {
+        grid-area: destacado-two;
+    }
+    div.destacados__three {
+        grid-area: destacado-three;
+    }
+    div.destacados__four {
+        grid-area: destacado-four;
+    }
+
+    main section.destacados div.destacados__general .destacados__imagen {
+        border: solid #3f552c;
+        border-radius: 50px;
+        margin: auto;
+        width: 85%;
+    }
+
+    main section.destacados div.destacados__general h2.destacados__producto{
+        font-family:'Oswald', sans-serif;
+        font-size: 30px;
+        margin-top: 5%;
+        text-transform: uppercase;
+        width: aut;
+    }
+    main section.destacados div.destacados__general p.destacados__parrafo{
+        color:rgb(206, 211, 216);
+        font-family:'Oswald', sans-serif;
+        font-size: 20px;
+        margin-top: 0%;
+        text-transform: uppercase;
+      
+    }
+}
+/*END SECTION destacados*/
+
+/*END SECTION QUERIES destacados*/
+
 
 /*SECTION iframe*/
 section.enlace {
     display: flex;
     flex-direction: column;
+    margin: 10px;
+    justify-items: center;
+    align-items: center;
     
 }
 section.enlace div.enlace__topcrop {
@@ -393,18 +490,80 @@ section.enlace div.enlace__topcrop {
 section.enlace div.enlace__topcrop iframe.enlace__video{
     border-radius: 10px;
 }
-section.enlace div.enlace__topcrop h2.enlace__titulo {
+section.enlace  div.enlace__titulo {
     font-family:'Oswald', sans-serif;
     text-transform: uppercase;
+    text-align: center;
    
 }
-section.enlace div.enlace__topcrop p.enlace__parrafo {
+section.enlace  div.enlace__parrafo {
     font-family:'Oswald', sans-serif;
     padding: 5px;
+    text-align: center;
+    background-color: #3c4336;
+    color: rgb(206, 211, 216);
+    border-radius: 10px;
 }
 /*END SECTION iframe*/
 
-/* END FOOTER*/
+/*SECTION QUERIES iframe*/
+
+@media (min-width: 1200px) {
+    section.enlace {
+        display: grid;
+        grid-template-areas: 
+        "video titulo"
+        "video parrafo"
+        ;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 2fr;
+        margin: 50px;
+        justify-items:center ;
+        align-items:center ;
+        gap: 15px;
+        
+    }
+    section.enlace div.enlace__topcrop {
+        text-align: center;
+        grid-area: video;
+        width: 100%; 
+        height: 100%;
+    }
+    section.enlace div.enlace__topcrop iframe.enlace__video{
+        border-radius: 0px;
+        border-radius: 20px;
+        width: 560px; 
+        height: 400px;
+
+    }
+    section.enlace  div.enlace__titulo {
+        grid-area: titulo;
+        font-family:'Oswald', sans-serif;
+        text-transform: uppercase;
+        font-size: 20px;
+        border: solid #3c4336;
+        border-radius: 10px;
+        padding: 5px;
+       
+    }
+    section.enlace div.enlace__parrafo {
+        background-color: #3c4336;
+        color: rgb(206, 211, 216);
+        border-radius: 10px;
+        grid-area: parrafo;
+        font-family:'Oswald', sans-serif;
+        padding: 10px;
+        font-size: 20px;
+
+    }
+    
+}
+/*END SECTION QUERIES iframe*/
+
+
+
+
+/*FOOTER*/
 footer.footer {
     font-family:'Oswald', sans-serif;
     background-color: #3c4336;
@@ -458,6 +617,93 @@ footer.footer a.footer__navegacion-anchor:hover {
     background-color: #495042;
     color: rgb(118, 223, 118);
 }
+footer.footer div.footer__right {
+    font-size: 15px;
+    margin: 5px;
+    text-align: center;
+    
+}
 
 /*END FOOTER*/
 
+
+/*FOOTER QUERIES*/
+
+@media (min-width: 1200px) {
+    footer.footer {
+        font-family:'Oswald', sans-serif;
+        background-color: #3c4336;
+        display: grid;
+        grid-template-areas: 
+        "contacto redes navegacion"
+        "contacto redes navegacion"
+        "copy copy copy"
+        ;
+        gap: 10px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 0.5fr;
+        padding-top: 50px;
+
+    }
+    
+    footer.footer div.footer__contacto {
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+        grid-area: contacto;
+    }
+    footer.footer h3.footer__contacto-titulo {
+        font-size: 200%;
+        color: rgb(206, 211, 216);
+    }
+    footer.footer p.footer__contacto-parrafos {
+        font-size: 150%;
+        color: rgb(206, 211, 216);
+    }
+    footer.footer div.footer__navegacion {
+        margin: 0px;
+        padding: 0px;
+        grid-area: navegacion;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    footer.footer h3.footer__navegacion-titulo {
+        font-size: 200%;
+        color: rgb(206, 211, 216);
+    }
+    footer.footer a.footer__navegacion-anchor {
+        font-size: 150%;
+        color: rgb(85, 170, 85);
+        text-decoration: underline;
+    }
+    footer.footer div.footer__redes {
+        margin: 0px;
+        padding: 0px;
+        grid-area: redes;
+        text-align: center;
+    }
+    footer.footer h3.footer__redes-titulo {
+        font-size: 200%;
+        text-align: center;
+        color: rgb(206, 211, 216);
+    }
+    footer.footer div.footer__right {
+        grid-area: copy;
+        font-size: 15px;
+        text-align: center;
+        
+    }
+    footer.footer img.footer__redes-imagen {
+        padding: 20px;
+       width: 25%;
+    }
+    footer.footer div.footer__right {
+        grid-area: copy;
+        font-size: 15px;
+        text-align: center;
+        
+    }
+}
+
+/*END FOOTER QUERIES*/

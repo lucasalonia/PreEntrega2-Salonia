@@ -18,6 +18,14 @@ body.scroll::-webkit-scrollbar-thumb {
 body.body {
     background-color: rgb(85, 170, 85);
 }
+@media (min-width: 1200px) {
+    body.scroll::-webkit-scrollbar {
+        width: 13px;
+    }
+    body.scroll::-webkit-scrollbar-thumb {
+        border-radius: 20px;
+    }
+}
 
 /* HEADER*/
 
@@ -61,7 +69,7 @@ section.descripcion .descripcion__contenedor-parrafo {
     font-size: 20px;
 }
 section.descripcion a.descripcion__contenedor-parrafo-anchor {
-    color: rgb(255, 255, 255);
+    color:  rgb(206, 211, 216);
     text-decoration: underline;
     border-radius: 10px;
 }
@@ -102,15 +110,15 @@ section.cbd .cbd__imagen-custom {
     border-radius: 7px;
 }
 section.cbd .cbd__descripcion {
+    background-color: #3c4336;
+    color: rgb(206, 211, 216);
+    border-radius: 10px;
+    padding: 10px;
     text-align: center;
     font-size: 20px;
     padding-top: 10px;
 }
 
-section.cbd .cbd__descripcion-two {
-    text-align: center;
-    font-size: 20px;
-}
 section.cbd a.cbd__descripcion-two-anchor {
     color: #ececec;
     text-decoration: underline;
@@ -128,6 +136,52 @@ section.cbd a.cbd__descripcion-two-anchor:hover {
 
 /*END SECTION cbd*/
 
+
+/*SECTION QUERIES cbd*/
+
+@media (min-width: 1200px) {
+    section.cbd {
+        font-family:'Oswald', sans-serif;
+        border: none;
+       margin: 20px;
+       padding: 20px;
+       margin-top: 50px;
+        display: grid;
+        grid-template-areas: 
+        "imagen titulo"
+        "imagen descripcion"
+        "imagen descripcion"
+        ;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.5fr 1fr 1fr;
+        gap: 20px;
+        justify-items: center;
+        align-items: center;
+    }
+    section.cbd h2.cbd__imagen-titulo{
+        grid-area: titulo;
+        text-align: center;
+    }
+    
+    section.cbd div.cbd__imagen {
+        grid-area: imagen;
+    }
+    section.cbd .cbd__imagen-custom {
+        grid-area: imagen;
+        border: 3px solid rgb(94, 179, 94);
+        margin-top: 10px;
+        width: 100%;
+        height: 100%;
+        border-radius: 7px;
+    }
+    section.cbd .cbd__descripcion {
+        grid-area: descripcion;
+        font-size: 20px;
+        padding-top: 10px;
+        
+    }
+    
+}
 
 /*SECTION variedades*/
 section.variedades {
@@ -166,7 +220,7 @@ section.variedades p.variedades__one-parrafo{
     margin-bottom: 50px;
 }
 section.variedades a.variedades__one-anchor{
-color: #ececec;
+    color: #ececec;
     text-decoration: underline;
     border-radius: 10px;
 }
@@ -196,7 +250,7 @@ section.variedades p.variedades__two-parrafo{
 
 }
 section.variedades a.variedades__two-anchor{
-    color: #5d6654;
+    color: rgb(206, 211, 216);
     text-decoration: underline;
     border-radius: 10px;
 }
@@ -213,6 +267,128 @@ section.variedades a.variedades__two-anchor:hover{
 /*END SECTION variedades*/
 
 
+/*SECTION QUERIES variedades*/
+@media (min-width: 1200px) {
+    section.variedades {
+        font-family:'Oswald', sans-serif;
+        display: grid;
+        grid-template-areas: 
+        "titulo titulo "
+        "titulo-one titulo-two"
+        "imagen-one imagen-two"
+        "descripcion-one descripcion-two"
+        ;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.1fr 0.2fr 1fr 0.3fr;
+        gap: 10px;
+        justify-items: center;
+        align-items: center;
+        background-color: #3c4336;
+        border-radius: 30px;
+        margin: 35px;
+    }
+    
+    section.variedades h2.variedades__titulo {
+        text-transform: uppercase;
+        font-size: 30px;
+        color: rgb(206, 211, 216);;
+    }
+    section.variedades div.variedades__titulo {
+        grid-area: titulo;
+    }
+    
+    section.variedades div.variedades__one-imagen {
+        width: 70%;
+        border-radius: 10px;
+        grid-area: imagen-one;
+        padding: 5px;
+    }
+    section.variedades img.variedades__one-imagen {
+        width: 75%;
+        border-radius: 10px;
+        grid-area: imagen-one;
+    }
+    section.variedades div.variedades__one-titulo{
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        font-size: 25px;
+        grid-area: titulo-one;
+        color: rgb(206, 211, 216);
+    }
+    section.variedades h2.variedades__one-titulo {
+        color: rgb(206, 211, 216);
+    }
+    section.variedades div.variedades__one-parrafo{
+        margin-top: 10px;
+        font-size: 20px;
+        margin-bottom: 50px;
+        grid-area: descripcion-one;
+        padding: 10px;
+        text-align: center;
+        color: rgb(206, 211, 216);
+    }
+    section.variedades a.variedades__one-anchor{
+    color: rgb(206, 211, 216);
+        text-decoration: underline;
+        border-radius: 10px;
+    }
+    section.variedades a.variedades__one-anchor:visited{
+        color: rgb(141, 90, 137);
+    }
+    section.variedades a.variedades__one-anchor:hover{
+        font-weight: bold;
+        padding: 2px;
+        background-color: #495042;
+        color: rgb(118, 223, 118);
+    }
+    
+    
+    section.variedades div.variedades__two-imagen {
+        width: 70%;
+        border-radius: 10px;
+        grid-area: imagen-two;
+    }
+    section.variedades div.variedades__two-titulo {
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        font-size: 25px;
+        grid-area: titulo-two;
+        color: rgb(206, 211, 216);
+    }
+    section.variedades h2.variedades__two-titulo {
+        color:  rgb(206, 211, 216);
+    }
+    section.variedades div.variedades__two-parrafo {
+        margin: 0px;
+        font-size: 20px;
+        grid-area: descripcion-two;
+        padding: 10px;
+        text-align: center;
+        color: rgb(206, 211, 216);
+    
+    }
+    section.variedades a.variedades__two-anchor{
+        color: rgb(206, 211, 216);
+        text-decoration: underline;
+        border-radius: 10px;
+    }
+    section.variedades a.variedades__two-anchor:visited{
+        color: rgb(141, 90, 137);
+    }
+    section.variedades a.variedades__two-anchor:hover{
+        font-weight: bold;
+        padding: 2px;
+        background-color: #495042;
+        color: rgb(118, 223, 118);
+    }
+    
+
+
+}
+
+
+/*END SECTION QUERIES variedades*/
+
 /*SECTION thc*/
 
 section.thc {
@@ -225,28 +401,29 @@ section.thc {
     display: flex;
     flex-direction: column;
 }
-section.thc h2.thc__imagen-titlo{
+section.thc div.thc__titulo{
     text-align: center;
     text-transform: uppercase;
-    font-size: 30px
+    font-size: 10px;
 }
-
+section.thc h2.thc__titulo-custom {
+    font-size: 25px;
+}
 section.thc .thc__imagen-custom {
-    border: 3px solid rgb(94, 179, 94);
     margin-top: 10px;
     width: 100%;
     height: 95%;
     border-radius: 7px;
 }
 section.thc .thc__descripcion {
+    background-color: #3c4336;
+    color: rgb(206, 211, 216);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px;
     text-align: center;
     font-size: 20px;
     padding-top: 10px;
-}
-
-section.thc .thc__descripcion-two {
-    text-align: center;
-    font-size: 20px;
 }
 section.thc a.thc__descripcion-anchor {
     color: #ececec;
@@ -262,6 +439,54 @@ section.thc a.thc__descripcion-anchor:hover {
     background-color: #495042;
     color: rgb(118, 223, 118);
 }
+/*END SECTION thc*/
+
+/*SECTION QUERIES thc*/
+
+@media (min-width: 1200px) {
+    section.thc {
+        font-family:'Oswald', sans-serif;
+        border-top: solid #495042;
+        display: grid;
+        grid-template-areas: 
+        "titulo imagen"
+        "descripcion  imagen"
+        "descripcion imagen "
+        ;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.5fr 1fr 1fr;
+        gap: 20px;
+        justify-items: center;
+        align-items: center;
+        margin: 20px;
+        margin-top: 100px;
+        padding: 20px;
+    }
+    section.thc div.thc__titulo{
+        grid-area: titulo;
+        text-align: center;
+    }
+    section.thc h2.thc__titulo-custom {
+        font-size: 40px;
+    }
+    section.thc .thc__imagen {
+        grid-area: imagen;
+        margin-top: 10px;
+        width: 100%;
+        height: 100%;
+        border-radius: 7px;
+    }
+    section.thc .thc__descripcion {
+        grid-area: descripcion;
+        padding: 20px;
+        font-size: 20px;
+        padding-top: 10px;
+    }
+
+
+}
+/*END SECTION QUERIES thc*/
+
 
 /*FOOTER*/
 footer.footer {
@@ -320,4 +545,83 @@ footer.footer a.footer__navegacion-anchor:hover {
 
 /*END FOOTER*/
 
-/*END FOOTER*/
+/*FOOTER QUERIES*/
+
+@media (min-width: 1200px) {
+    footer.footer {
+        font-family:'Oswald', sans-serif;
+        background-color: #3c4336;
+        display: grid;
+        grid-template-areas: 
+        "contacto redes navegacion"
+        "contacto redes navegacion"
+        "copy copy copy"
+        ;
+        gap: 10px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 0.5fr;
+        padding-top: 50px;
+
+    }
+    
+    footer.footer div.footer__contacto {
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+        grid-area: contacto;
+    }
+    footer.footer h3.footer__contacto-titulo {
+        font-size: 200%;
+        color: rgb(206, 211, 216);
+    }
+    footer.footer p.footer__contacto-parrafos {
+        font-size: 150%;
+        color: rgb(206, 211, 216);
+    }
+    footer.footer div.footer__navegacion {
+        margin: 0px;
+        padding: 0px;
+        grid-area: navegacion;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    footer.footer h3.footer__navegacion-titulo {
+        font-size: 200%;
+        color: rgb(206, 211, 216);
+    }
+    footer.footer a.footer__navegacion-anchor {
+        font-size: 150%;
+        color: rgb(85, 170, 85);
+        text-decoration: underline;
+    }
+    footer.footer div.footer__redes {
+        margin: 0px;
+        padding: 0px;
+        grid-area: redes;
+        text-align: center;
+    }
+    footer.footer h3.footer__redes-titulo {
+        font-size: 200%;
+        text-align: center;
+        color: rgb(206, 211, 216);
+    }
+    footer.footer div.footer__right {
+        grid-area: copy;
+        font-size: 15px;
+        text-align: center;
+        
+    }
+    footer.footer img.footer__redes-imagen {
+        padding: 20px;
+       width: 25%;
+    }
+    footer.footer div.footer__right {
+        grid-area: copy;
+        font-size: 15px;
+        text-align: center;
+        
+    }
+}
+
+/*END FOOTER QUERIES*/
